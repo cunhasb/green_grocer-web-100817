@@ -25,11 +25,11 @@ def apply_coupons(cart, coupons)
   # code here
  item = coupons[0][:item]
  if cart[item]
-   remainder = cart[item][:count] % coupons[:num]
-   sets = cart[item][:count] / coupons[:num]
+   remainder = cart[item][:count] % coupons[0][:num]
+   sets = cart[item][:count] / coupons[0][:num]
    if sets >= 1
      cart[item + " W/COUPON"] = {
-       price: coupons[:cost],
+       price: coupons[0][:cost],
        clearance: cart[item][:clearance],
        count: sets}
      end
