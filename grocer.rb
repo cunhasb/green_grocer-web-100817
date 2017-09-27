@@ -50,7 +50,7 @@ def apply_clearance(cart)
     results[items]=attr
     if attr[:clearance]
       binding.pry
-      results[items][:price] = attr[:price] * 0.8
+      results[items][:price] = (attr[:price] * 80)/100
     end
   end
 end
