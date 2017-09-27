@@ -10,7 +10,7 @@ def consolidate_cart(cart)
   cart.each_with_object({}) do |(items,hash),new_cart|
     new_cart[items] ||= {hash}
     new_cart[items][:count] ||=0
-    new_cart[items][:count] =+ 1
+    new_cart[items][:count] = new_cart[items][:count] + 1
   end
 end
 
