@@ -11,7 +11,7 @@ def consolidate_cart(cart)
   #  new_cart[items] ||= {hash}
     #new_cart[items][:count] ||= 0
     #new_cart[items][:count] =+ 1
-  #end
+  end
 end
 
 def apply_coupons(cart, coupons)
