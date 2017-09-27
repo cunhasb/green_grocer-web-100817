@@ -28,7 +28,7 @@ def apply_coupons(cart, coupons)
  sets = cart[item][:count] / coupons[:num]
  if cart[item]
    if sets >= 1
-     cart["#{item << "W/COUPON"}"] = {
+     cart[item << "W/COUPON"] = {
        price: coupons[:cost],
        clearance: cart[item][:clearance],
        count: sets}
