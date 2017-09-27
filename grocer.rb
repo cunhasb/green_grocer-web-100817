@@ -23,6 +23,7 @@ end
 
 def apply_coupons(cart, coupons)
   # code here
+  binding.pry
  item = coupons[:item]
  if cart[item]
    remainder = cart[item][:count] % coupons[:num]
