@@ -32,7 +32,7 @@ def apply_coupons(cart, coupons)
      cart[item << " W/COUPON"] = {
        price: coupons[:cost],
        clearance: cart[item][:clearance],
-       cart[item]count: sets}
+       count: sets}
      end
      if remainder >= 1
         cart[item][:count] = remainder
@@ -40,7 +40,6 @@ def apply_coupons(cart, coupons)
         cart.delete[item]
       end
  end
- binding.pry
 end
 
 def apply_clearance(cart)
