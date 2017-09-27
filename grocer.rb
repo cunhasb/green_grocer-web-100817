@@ -1,6 +1,16 @@
 require 'pry'
+cart = [
+  {"AVOCADO" => {:price => 3.0, :clearance => true }},
+  {"AVOCADO" => {:price => 3.0, :clearance => true }},
+  {"KALE"    => {:price => 3.0, :clearance => false}}
+]
+
 def consolidate_cart(cart)
-  # code here
+  cart.each_with_object({}) do |(items,hash),new_cart|
+    new_cart[items] ||= {hash}
+    new_cart[items][:count] ||=0
+    new_cart[items][:count] =+ 1
+  end
 end
 
 def apply_coupons(cart, coupons)
