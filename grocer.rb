@@ -9,12 +9,11 @@ def consolidate_cart(cart)
   cart_hash={}
   cart.each do |hash|
     hash.each do |item,attr|
-      binding.pry
       cart_hash[item] ||= attr
-      binding.pry
     end
   end
   cart_hash
+  binding.pry
 end
 
 def apply_coupons(cart, coupons)
