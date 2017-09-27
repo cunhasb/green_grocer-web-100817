@@ -57,10 +57,7 @@ def checkout(cart, coupons)
   new_cart= apply_clearance(apply_coupons(consolidate_cart(cart),coupons))
   subtotal = 0.0
   total = 0.0
-  new_cart.each do |items,attr|
-    binding.pry
-     subtotal =+ attr[:price]
-   end
+  new_cart.each {|items,attr|subtotal = subtotal +  attr[:price]}
   (subtotal > 100) ? (total = subtotal * 0.90):(total = subtotal)
 binding.pry
 end
