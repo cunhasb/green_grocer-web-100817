@@ -49,4 +49,5 @@ end
 def checkout(cart, coupons)
   # code here
 end
-apply_coupons(consolidate_cart(cart),coupons)
+x = apply_coupons(consolidate_cart(cart),coupons)
+binding.pry
