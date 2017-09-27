@@ -59,7 +59,6 @@ def checkout(cart, coupons)
   total = 0.0
   new_cart.each {|items,attr|subtotal = subtotal +  attr[:price]}
   (subtotal > 100) ? (total = subtotal * 0.90):(total = subtotal)
-binding.pry
 end
 x=checkout(cart,coupons)
 binding.pry
