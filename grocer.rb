@@ -5,6 +5,8 @@ cart = [
   {"KALE"    => {:price => 3.0, :clearance => false}}
 ]
 
+coupons={:item => "AVOCADO", :num => 2, :cost => 5.0}
+
 def consolidate_cart(cart)
   cart_hash={}
   cart.each do |hash|
@@ -21,6 +23,7 @@ end
 
 def apply_coupons(cart, coupons)
   # code here
+  binding.pry
 end
 
 def apply_clearance(cart)
@@ -30,4 +33,4 @@ end
 def checkout(cart, coupons)
   # code here
 end
-consolidate_cart(cart)
+apply_coupons(consolidate_cart(cart),coupons)
