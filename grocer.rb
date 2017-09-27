@@ -28,9 +28,9 @@ def apply_coupons(cart, coupons)
  sets = cart[item][:count] / coupons[:num]
  if cart[item] && cart[item][:count] >= coupons[:num]
    (cart[item][:count] % coupons[:num]) == 0 ? cart[item].delete : cart[item][:count][]
-   
+
   binding.pry
-  
+
 end
 
 def apply_clearance(cart)
