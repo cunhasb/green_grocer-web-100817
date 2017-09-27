@@ -24,9 +24,9 @@ end
 def apply_coupons(cart, coupons)
   # code here
  item = coupons[:item]
- remainder = cart[item][:count] % coupons[:num]
- sets = cart[item][:count] / coupons[:num]
  if cart[item]
+   remainder = cart[item][:count] % coupons[:num]
+   sets = cart[item][:count] / coupons[:num]
    if sets >= 1
      cart[item + " W/COUPON"] = {
        price: coupons[:cost],
