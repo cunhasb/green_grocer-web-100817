@@ -27,8 +27,8 @@ def apply_coupons(cart, coupons)
  remainder = cart[item][:count] % coupons[:num]
  sets = cart[item][:count] / coupons[:num]
  if cart[item]
-   binding.pry
    if sets >= 1
+   binding.pry
      cart[item << "W/COUPON"] = {
        price: coupons[:cost],
        clearance: cart[item][:clearance],
