@@ -60,6 +60,6 @@ def checkout(cart, coupons)
   subtotal = 0
   total = 0
   binding.pry
-  new_cart.each {|items,attr|subtotal = subtotal +  attr[:price]}
+  new_cart.each {|items,attr|subtotal = subtotal +  (attr[:price] * attr[:count]}
   (subtotal > 100) ? (total = (subtotal * 90)/100):(total = subtotal)
 end
