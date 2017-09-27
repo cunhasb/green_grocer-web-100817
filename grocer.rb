@@ -38,7 +38,6 @@ def apply_coupons(cart, coupons)
       else
         cart.delete(item)
       end
-      binding.pry
  end
 end
 
@@ -50,3 +49,4 @@ def checkout(cart, coupons)
   # code here
 end
 apply_coupons(consolidate_cart(cart),coupons)
+binding.pry
