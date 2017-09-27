@@ -7,10 +7,12 @@ cart = [
 
 def consolidate_cart(cart)
   binding.pry
-  cart.each_with_object({}) do |(items,hash),new_cart|
-  #  new_cart[items] ||= {hash}
-    #new_cart[items][:count] ||= 0
-    #new_cart[items][:count] =+ 1
+  cart.each_with_object({}) do |(array,hash),new_cart|
+    hash.each |item,hsh|
+      new_cart[item] ||= {}
+      new_cart[item][:count] ||= 0
+      new_cart[item][:count] =+ 1
+    end
   end
 end
 
