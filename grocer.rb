@@ -37,6 +37,7 @@ def apply_coupons(cart, coupons)
         cart[item][:count] = remainder
       else
         cart.delete(item)
+        binding.pry
       end
  end
 end
