@@ -34,9 +34,9 @@ def apply_coupons(cart, coupons)
        count: sets}
      end
      remainder >=1 ? cart[item][:count] = remainder : cart.delete[item]unt][]
-
+   end
+ end
   binding.pry
-
 end
 
 def apply_clearance(cart)
