@@ -9,6 +9,7 @@ def consolidate_cart(cart)
   cart_hash={}
   cart.each do |hash|
     cart_hash.each do |item,attr|
+      binding.pry
       cart_hash[item] ||= attr
       binding.pry
     end
