@@ -1,12 +1,12 @@
 require 'pry'
-cart = [
+=begin cart = [
   {"AVOCADO" => {:price => 3.0, :clearance => true }},
   {"AVOCADO" => {:price => 3.0, :clearance => true }},
   {"KALE"    => {:price => 3.0, :clearance => false}}
 ]
 
 coupons={:item => "AVOCADO", :num => 2, :cost => 5.0}
-
+=end
 def consolidate_cart(cart)
   cart_hash={}
   cart.each do |hash|
