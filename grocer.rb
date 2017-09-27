@@ -9,7 +9,11 @@ def consolidate_cart(cart)
   cart_hash={}
   cart.each do |hash|
     hash.each do |item,attr|
-      cart_hash[item] ||= attr
+      if !cart_hash.key?(item)
+        cart_hash[item] = attr
+        cart_hash[item][:count]=0
+      end
+      cart_hash[item][:count]=+1
     end
   end
   cart_hash
