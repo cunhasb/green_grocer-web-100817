@@ -13,7 +13,7 @@ def consolidate_cart(cart)
         cart_hash[item] = attr
         cart_hash[item][:count]=0
       end
-      cart_hash[item][:count]=+1
+      cart_hash[item][:count] = cart_hash[item][:count] + 1
       binding.pry
     end
   end
