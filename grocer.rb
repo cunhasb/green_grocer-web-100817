@@ -25,3 +25,4 @@ end
 def checkout(cart, coupons)
   # code here
 end
+consolidate_cart(cart)
