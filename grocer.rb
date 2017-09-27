@@ -40,6 +40,7 @@ coupons.each do |coupon|
         cart[item][:count] = 0
       end
  end
+ end
  cart
 end
 
