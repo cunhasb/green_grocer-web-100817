@@ -61,5 +61,5 @@ def checkout(cart, coupons)
   (subtotal > 100) ? (total = subtotal * 0.90):(total = subtotal)
 
 end
-checkout(cart,coupons)
+x=checkout(cart,coupons)
 binding.pry
