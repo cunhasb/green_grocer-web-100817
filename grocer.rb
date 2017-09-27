@@ -33,6 +33,7 @@ def apply_coupons(cart, coupons)
        clearance: cart[item][:clearance],
        count: sets}
      end
+     binding.pry
      if remainder >= 1
         cart[item][:count] = remainder
       else
