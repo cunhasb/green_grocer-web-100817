@@ -44,6 +44,12 @@ end
 
 def apply_clearance(cart)
   # code here
+  cart.each_with_object({}) do |(items,attr),results|
+    results[items]=attr
+    if attr[:clearance]
+      results[items][:price] = attr[:price] * 1.2
+    end
+  end
 end
 
 def checkout(cart, coupons)
