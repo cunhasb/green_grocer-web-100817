@@ -14,10 +14,10 @@ def consolidate_cart(cart)
         cart_hash[item][:count]=0
       end
       cart_hash[item][:count]=+1
+      binding.pry
     end
   end
   cart_hash
-  binding.pry
 end
 
 def apply_coupons(cart, coupons)
