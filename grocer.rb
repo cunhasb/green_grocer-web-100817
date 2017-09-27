@@ -37,7 +37,7 @@ def apply_coupons(cart, coupons)
      if remainder >= 1
         cart[item][:count] = remainder
       else
-        cart.delete(item)
+        cart[item][:count] = 0
       end
  end
  cart
