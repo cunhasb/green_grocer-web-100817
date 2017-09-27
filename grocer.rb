@@ -7,13 +7,13 @@ cart = [
 
 def consolidate_cart(cart)
   cart_hash={}
-  cart.each do |items|
-    items.each do |item,attr|
+  cart.each do |hash|
+    cart_hash.each do |item,attr|
       cart_hash[item] ||= attr
-      cart_hash[item][:count] || = 0
-      cart_hash[item][:count] =+ 1
+      binding.pry
     end
   end
+  cart_hash
 end
 
 def apply_coupons(cart, coupons)
