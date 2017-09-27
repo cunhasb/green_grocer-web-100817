@@ -39,6 +39,7 @@ def apply_coupons(cart, coupons)
         cart.delete(item)
       end
  end
+cart
  binding.pry
 end
 
