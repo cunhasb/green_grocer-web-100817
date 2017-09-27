@@ -38,8 +38,8 @@ def apply_coupons(cart, coupons)
       else
         cart.delete(item)
       end
-      binding.pry
  end
+ binding.pry
 end
 
 def apply_clearance(cart)
