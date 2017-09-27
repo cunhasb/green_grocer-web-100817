@@ -60,7 +60,7 @@ def checkout(cart, coupons)
   new_cart.each |items,attr| do
     subtotal =+ attr[:price]
   end
-  subtotal > 100 ? total = subtotal * 0.90 : total = subtotal
+  (subtotal > 100) ? (total = subtotal * 0.90) : (total = subtotal)
 
 end
 checkout(cart,coupons)
