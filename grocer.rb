@@ -49,7 +49,6 @@ def apply_clearance(cart)
   cart.each_with_object({}) do |(items,attr),results|
     results[items]=attr
     if attr[:clearance]
-      binding.pry
       results[items][:price] = (attr[:price] * 80)/100
     end
   end
